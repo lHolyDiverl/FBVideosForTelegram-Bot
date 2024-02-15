@@ -38,7 +38,7 @@ if __name__ == "__main__":
     def send_welcome(message):
         bot.reply_to(message, 'TEST MESSAGE')
 
-    @bot.message_handler(func=lambda msg: msg.text is not None and '@BotName' in msg.text)
+    @bot.message_handler(func=lambda msg: msg.text is not None and '@FBvidToTG_bot' in msg.text)
     def at_answer(message):
         fburl = message.text.split()[1]
         if 'http' not in fburl:
